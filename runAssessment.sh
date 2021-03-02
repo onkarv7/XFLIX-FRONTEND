@@ -11,7 +11,7 @@ set -e
 
 # kill descendants on exit
 # https://stackoverflow.com/a/2173421
-trap "echo 'Cleaning up resources' && trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
+# trap "echo 'Cleaning up resources' && trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
 
 # 1. Start React app
@@ -25,8 +25,8 @@ fi
 
 if netstat -tna | grep 'LISTEN\>' | grep -q $REACT_PORT; 
 then
-  echo "Something is already running on port $REACT_PORT"
-  exit 1
+  lsof -ti tcp:$REACT_PORT | xargs kill
+  echo "Killed application running on $REACT_PORT"
 fi
 
 cd $PWD/frontend && npm install && nohup npm start &

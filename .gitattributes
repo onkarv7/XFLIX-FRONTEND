@@ -1,0 +1,5 @@
+.gitattributes merge=copy-merge
+.gitignore merge=copy-merge
+runAssessment.sh merge=copy-merge
+assessment/** merge=copy-merge
+__CRIO__/* merge=copy-merge
