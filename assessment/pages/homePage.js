@@ -49,7 +49,7 @@ const homePage = {
   },
 
   contentRating() {
-    return cy.get(this.genreClass)
+    return cy.get(this.contentRatingClass);
   },
 
   viewCount() {

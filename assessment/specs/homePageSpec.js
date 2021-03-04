@@ -5,30 +5,30 @@ describe("XFlix", () => {
     homePage.goto();
   });
 
-  it("should display 5 genres in row 1", () => {
+  it('should display 5 genre buttons on a row', () => {
     homePage.genre().should("have.length", 5);
   });
 
-  it("should display 5 buttons on content rating", () => {
-    homePage.genre().should("have.length", 5);
+  it('should display 5 content rating buttons on a row', () => {
+    homePage.contentRating().should("have.length", 5);
   });
 
-  it("should not have same parent for genre and content rating buttons", () => {
+  it('should not have same parent for genre and content rating buttons', () => {
     homePage
       .genre()
       .parent()
       .should("to.not.equal", homePage.contentRating().parent());
   });
 
-  it("should not have viewCount option selected in sort by dropdown on page load", () => {
+  it('should not have viewCount option selected in sort by dropdown on page load', () => {
     homePage.viewCount().should("not.to.be.selected");
   });
 
-  it("should have releaseDate option selected in sort by dropdown on page load", () => {
+  it('should have releaseDate option selected in sort by dropdown on page load', () => {
     homePage.releaseDate().should("to.be.selected");
   });
 
-  it("should have viewCount option selectable after clicking on the sort by dropdown", () => {
+  it('should have viewCount option selectable after clicking on the sort by dropdown', () => {
     homePage.sortBy().select("viewCount");
     homePage.viewCount().should("to.be.selected");
   });
