@@ -24,7 +24,9 @@ yarn-debug.log*
 yarn-error.log*
 
 yarn.lock
-package-lock.json
 .vscode/
 
 .netlify
+
+node_modules
+node_modules/
