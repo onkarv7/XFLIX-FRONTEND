@@ -29,7 +29,7 @@ then
   echo "Killed application running on $REACT_PORT"
 fi
 
-cd $PWD/frontend && npm install && nohup npm start &
+cd $PWD/frontend && pnpm install && nohup npm start &
 
 while ! netstat -tna | grep 'LISTEN\>' | grep -q $REACT_PORT; do
   echo "waiting for React application to start on port $REACT_PORT"
@@ -37,4 +37,4 @@ while ! netstat -tna | grep 'LISTEN\>' | grep -q $REACT_PORT; do
 done
 
 # 2. Run assessment
-cd $PWD/assessment && npm install && npm run test
+cd $PWD/assessment && pnpm install && npm run test
