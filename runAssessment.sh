@@ -1,3 +1,6 @@
+# setup for pnpm to pickup npm in script
+shopt -s expand_aliases
+. ~/.bash_aliases
 
 # Override baseUrl in cypress.json
 # https://docs.cypress.io/guides/references/configuration.html#Environment-Variables
