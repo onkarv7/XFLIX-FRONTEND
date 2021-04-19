@@ -39,17 +39,17 @@ describe("XFlix", () => {
 
   it('should open video modal with "Submit" and "Cancel" buttons, on clicking "Upload" button', () => {
     homePage.modalSubmitButton().should("not.to.exist");
-    homePage.uploadButton().click();
+    homePage.uploadButton().click({force: true});
     homePage.modalCancelButton().focus();
     homePage.modalSubmitButton().should("to.be.visible");
     homePage.modalCancelButton().should("to.be.visible");
   });
 
   it('should open video modal on clicking "Upload" button and close it on clicking "Cancel" button in the modal', () => {
-    homePage.uploadButton().click();
+    homePage.uploadButton().click({force: true});
     homePage.modalCancelButton().focus();
     homePage.modalCancelButton().should("to.be.visible");
-    homePage.modalCancelButton().click();
+    homePage.modalCancelButton().click({force: true});
     homePage.modalCancelButton().should("not.to.exist");
   });
 
@@ -63,7 +63,7 @@ describe("XFlix", () => {
     () => {
       let videoTileList = homePage.videoTile();
       videoTileList.should("to.have.length.of.at.least", 10);
-      videoTileList.first().click();
+      videoTileList.first().click({force: true});
       homePage.viewIframe().should("to.have.length.of", 1);
     }
   );
