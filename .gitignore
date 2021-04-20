@@ -31,3 +31,4 @@ yarn.lock
 node_modules
 node_modules/
 frontend/package-lock.json
+frontend/pnpm-lock.yaml
