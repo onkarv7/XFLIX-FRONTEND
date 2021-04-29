@@ -1,13 +1,14 @@
 {
-    "baseUrl": "http://localhost:8081/",
-    "fixturesFolder": "fixtures",
-    "integrationFolder": "specs",
-    "pluginsFile": "plugins",
-    "screenshotsFolder": "screenshots",
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "reporterEnabled": "spec, mocha-junit-reporter"
-    },
-    "pageLoadTimeout": 120000,
-    "retries": 1
+  "baseUrl": "http://localhost:8081/",
+  "fixturesFolder": "fixtures",
+  "integrationFolder": "specs",
+  "pluginsFile": "plugins",
+  "screenshotsFolder": "screenshots",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "spec, mocha-junit-reporter"
+  },
+  "pageLoadTimeout": 120000,
+  "retries": 1,
+  "defaultCommandTimeout": 6000
 }
