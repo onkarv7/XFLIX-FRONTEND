@@ -8,5 +8,6 @@
     "reporterOptions": {
         "reporterEnabled": "spec, mocha-junit-reporter"
     },
-    "pageLoadTimeout": 90000
+    "pageLoadTimeout": 120000,
+    "retries": 1
 }
