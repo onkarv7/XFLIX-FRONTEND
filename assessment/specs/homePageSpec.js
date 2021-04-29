@@ -53,7 +53,7 @@ describe("XFlix", () => {
     homePage.modalCancelButton().should("not.to.exist");
   });
 
-  it('should have at least 10 links (with class "video-tiles-link") to different videos on page load.', () => {
+  it('should have at least 10 links (with class "video-tile-link") to different videos on page load.', () => {
     homePage.videoTileLink().should("to.have.length.of.at.least", 10);
   });
 
