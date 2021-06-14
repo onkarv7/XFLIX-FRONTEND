@@ -57,14 +57,10 @@ describe("XFlix", () => {
     homePage.videoTileLink().should("to.have.length.of.at.least", 10);
   });
 
-  it(
-    'should display the video page on clicking the first video tile (with class "video-tile") which has a parent element with class "video-tile"' +
-      'which is child of an "video-tile-link" element ',
-    () => {
-      let videoTileList = homePage.videoTile();
-      videoTileList.should("to.have.length.of.at.least", 10);
-      videoTileList.first().click();
-      homePage.viewIframe().should("to.have.length.of", 1);
-    }
-  );
+  it('should display the video page on clicking the first video tile (with class "video-tile") which has a parent element with class "video-tile-link"', () => {
+    let videoTileList = homePage.videoTile();
+    videoTileList.should("to.have.length.of.at.least", 10);
+    videoTileList.first().click();
+    homePage.viewIframe().should("to.have.length.of", 1);
+  });
 });
