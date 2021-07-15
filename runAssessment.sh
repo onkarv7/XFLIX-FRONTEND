@@ -8,7 +8,7 @@ export CYPRESS_BASE_URL=http://localhost:8081
 
 REACT_PORT=8081
 PROJECT_DIR="$PWD"
-REACT_DIR="$PWD/frontend"
+REACT_DIR="$PROJECT_DIR/frontend"
 
 # exit on non-zero return code
 set -e
