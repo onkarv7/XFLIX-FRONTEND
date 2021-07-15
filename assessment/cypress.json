@@ -11,5 +11,5 @@
   "pageLoadTimeout": 120000,
   "retries": 1,
   "defaultCommandTimeout": 6000,
-  "videoCompression": false
+  "videoCompression": false 
 }

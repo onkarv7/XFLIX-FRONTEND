@@ -7,6 +7,7 @@
 export CYPRESS_BASE_URL=http://localhost:8081
 
 REACT_PORT=8081
+PROJECT_DIR="$PWD"
 REACT_DIR="$PWD/frontend"
 
 # exit on non-zero return code
@@ -32,7 +33,7 @@ then
   echo "Killed application running on $REACT_PORT"
 fi
 
-cd $PWD/frontend && npm install && nohup npm start &
+cd $PROJECT_DIR/frontend && npm install && pm2 start npm -- start
 
 while ! netstat -tna | grep 'LISTEN\>' | grep -q $REACT_PORT; do
   echo "waiting for React application to start on port $REACT_PORT"
@@ -40,4 +41,6 @@ while ! netstat -tna | grep 'LISTEN\>' | grep -q $REACT_PORT; do
 done
 
 # 2. Run assessment
-cd $PWD/assessment && npm install && npm run test
+cd $PROJECT_DIR/assessment && npm install && npm run test || true
+
+cd $PROJECT_DIR/frontend && pm2 stop npm
