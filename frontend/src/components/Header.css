@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 50%;
+    background-color: rgba(34, 33, 33, 0.293);
+}
+.searchbar{
+    width: 50%;
+}

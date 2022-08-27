@@ -1,0 +1,18 @@
+.ends{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.text{
+    width: 30rem;
+    color: white !important;
+}
+.uploadbox{
+    width: 30%;
+}
+.dialogue{
+    border-color: white !important;
+}
+.dc{
+    color: white !important;
+}

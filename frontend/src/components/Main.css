@@ -1,0 +1,31 @@
+
+.filterrow{
+    /* padding-left: 24rem;
+    padding-right: 15rem; */
+    padding-right: 1rem !important;
+    padding-left: 33%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    border-radius: 28px !important;
+    background-color: white !important;
+    color: black !important;
+    margin-top: 1rem !important;
+    
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    
+    
+    /* border-top-right-radius: 40% !important;
+    border-bottom-left-radius: 40% !important;
+    border-bottom-right-radius: 40% !important; */
+}
+.btn{
+    color: white !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-top: 1rem !important;
+
+}

@@ -1,0 +1,34 @@
+.videoinfo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0%;
+    padding-left: 10%;
+    padding-bottom:2%;
+   padding-right:10%;
+    background-color: #181818;
+}
+.start{
+    margin-right:1rem;
+    color: white;
+    
+}
+.buttons{
+    padding: 2rem;
+    
+}
+.iframe {
+    padding-top: 3%;
+    padding-right: 10%;
+    padding-left: 10%;
+    height: 40rem;
+    background-color: #181818;
+    
+    
+}
+.white{
+    color: white;
+}
+br{
+    padding-left: 10%;
+    padding-right: 10%;
+}
